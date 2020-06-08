@@ -1,13 +1,15 @@
 package com.company.models;
 
+import com.company.Enum.Trabalho;
 import com.company.Interface.PostarMensagem;
+import com.company.Interface.Apresentacao;
 
-public abstract class Usuario implements PostarMensagem {
+public abstract class Usuario implements PostarMensagem,Apresentacao {
     public String name;
     public String email;
-    public String cargo;
+    public Trabalho cargo;
 
-    public Usuario(String name,String email,String cargo) {
+    public Usuario(String name,String email,Trabalho cargo) {
         this.name = name;
         this.email = email;
         this.cargo = cargo;
@@ -16,9 +18,11 @@ public abstract class Usuario implements PostarMensagem {
     public String getName() {
         return name;
     }
-    public String getCargo() {
+
+    public Trabalho getCargo() {
         return cargo;
     }
+
     public String getEmail() {
         return email;
     }
@@ -28,7 +32,8 @@ public abstract class Usuario implements PostarMensagem {
     public void setEmail(String email) {
         this.email = email;
     }
-    public void setCargo(String cargo) {
+
+    public void setCargo(Trabalho cargo) {
         this.cargo = cargo;
     }
 
