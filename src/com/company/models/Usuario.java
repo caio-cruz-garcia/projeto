@@ -7,8 +7,10 @@ public abstract class Usuario implements PostarMensagem {
     public String email;
     public String cargo;
 
-    public Usuario(Usuario usuario,String name) {
+    public Usuario(String name,String email,String cargo) {
         this.name = name;
+        this.email = email;
+        this.cargo = cargo;
     }
 
     public String getName() {
@@ -28,5 +30,14 @@ public abstract class Usuario implements PostarMensagem {
     }
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", cargo='" + cargo + '\'' +
+                '}';
     }
 }

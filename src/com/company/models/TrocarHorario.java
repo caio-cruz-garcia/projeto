@@ -2,10 +2,10 @@ package com.company.models;
 
 public class TrocarHorario {
     public String Extras;
-    public String Trbalho;
+    public String Trabalho;
 
-    public TrocarHorario(String extras, String trbalho) {
+    public TrocarHorario(String extras, String trabalho) {
         Extras = extras;
-        Trbalho = trbalho;
+        Trabalho = trabalho;
     }
 }
