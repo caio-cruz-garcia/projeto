@@ -27,8 +27,46 @@ public class Menu {
             System.out.println("Horarios de Trabalho Atual: " + cadastrar.getHorarios());
             int menu = scanner.nextInt();
 
-            switch ()
+            switch (menu){
+                case 1:
+                    Usuario usuario = menuCadatraUsuario();
+                    if(usuario != null){
+                        cadastrar.CadastrarUsuario(usuario);
+                    }
+                    break;
+                case 2:
+                    if(cadastrar.getListausuario().size() > 0){
+                        for (int i=0; i<cadastrar.getListausuario().size();i++){
+                            System.out.format("%d - %s %s",i,cadastrar.getListausuario().get(i).getName(),cadastrar.getListausuario().get(i).getCargo());
+                        }
+                        System.out.println("Digite o Usuario a ser excluido:");
+                        int index = scanner.nextInt();
+                        cadastrar.Deletar(cadastrar.getListausuario().get(index));
+                    }
+                    else{
+                        System.out.println("Ainda não há usuarios cadastrados:");
+                    }
+                    break;
+                case 3:
+                    cadastrar.ExibirMensagem();
+                    break;
+                case 4:
+                    cadastrar.MostrarUsuarios();
+                    break;;
+                case 5:
+                    cadastrar.Trocarhorario();
+                    break;
+                case 6:
+                    run = false;
+                    break;
+                default:
+                    break;
+            }
+            System.out.println();
         }
+    }
+    public static Usuario menuCadatraUsuario(){
+        System.out.println("");
     }
 }
 
