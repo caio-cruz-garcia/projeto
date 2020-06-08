@@ -1,5 +1,5 @@
-package com.company.Enum
+package com.company.Enum;
 
-enum class Trabalho {
+public enum Trabalho {
     Mobile_Members,Heavy_Lifters,Script_Guys,Big_Brothers;
 }

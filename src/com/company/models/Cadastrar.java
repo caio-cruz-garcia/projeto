@@ -16,5 +16,5 @@ public class Cadastrar {
     public Cadastrar(ArrayList<Usuario> listausuario) {
         Listausuario = listausuario;
     }
-    
+
 }
