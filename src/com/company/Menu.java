@@ -13,6 +13,7 @@ import java.util.Scanner;
 
 public class Menu {
     final static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) throws Exception {
         Cadastrar cadastrar = new Cadastrar(HorariosExtras.horarioNormal);
         System.out.println("Bem Vindo!");
@@ -29,7 +30,7 @@ public class Menu {
 
             switch (menu){
                 case 1:
-                    Usuario usuario = menuCadatraUsuario();
+                    Usuario usuario = menuCadatrarUsuario();
                     if(usuario != null){
                         cadastrar.CadastrarUsuario(usuario);
                     }
@@ -52,7 +53,7 @@ public class Menu {
                     break;
                 case 4:
                     cadastrar.MostrarUsuarios();
-                    break;;
+                    break;
                 case 5:
                     cadastrar.Trocarhorario();
                     break;
@@ -65,8 +66,31 @@ public class Menu {
             System.out.println();
         }
     }
-    public static Usuario menuCadatraUsuario(){
-        System.out.println("");
+    public static Usuario menuCadatrarUsuario(){
+        System.out.println("Cadastrar usuario");
+        System.out.println("Digite o Cargo");
+        String cargo = scanner.next();
+        System.out.print("Digite o nome");
+        String name = scanner.next();
+        System.out.print("Digite o email");
+        String email = scanner.next();
+        System.out.println("Digite o Trabalho");
+        if(cargo == "Mobile Members"){
+            return new Mobile_Members(name,email,Trabalho.Mobile_Members);
+        }
+        else if(cargo == "Heavy Lifters"){
+            return new Mobile_Members(name,email,Trabalho.Heavy_Lifters);
+        }
+        else if(cargo == "Script Guys"){
+            return new Mobile_Members(name,email,Trabalho.Script_Guys);
+        }
+        else if(cargo == "Big Brothers"){
+            return new Mobile_Members(name,email,Trabalho.Big_Brothers);
+        }
+        else{
+            System.out.println("Não Existe cargo com esse nome");
+        }
+        return Menu;
     }
 }
 

@@ -10,7 +10,7 @@ public class Cadastrar {
     private Trabalho trabalho;
     private HorariosExtras horarios;
 
-    public Cadastrar(Trabalho trabalho) {
+    public Cadastrar(HorariosExtras trabalho) {
         this.trabalho = trabalho;
     }
 
