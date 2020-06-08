@@ -1,14 +1,14 @@
 package com.company.models;
 
-public class Usuario {
+import com.company.Interface.PostarMensagem;
+
+public abstract class Usuario implements PostarMensagem {
     public String name;
     public String email;
     public String cargo;
 
-    public Usuario(String name, String email, String cargo) {
+    public Usuario(Usuario usuario,String name) {
         this.name = name;
-        this.email = email;
-        this.cargo = cargo;
     }
 
     public String getName() {
@@ -17,5 +17,16 @@ public class Usuario {
     public String getCargo() {
         return cargo;
     }
-
+    public String getEmail() {
+        return email;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
 }
