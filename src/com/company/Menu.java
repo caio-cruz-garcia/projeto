@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Menu {
     final static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) throws Exception {
+    public static void run() throws Exception {
         Cadastrar cadastrar = new Cadastrar(HorariosExtras.horarioNormal);
         System.out.println("Bem Vindo!");
         boolean run = true;
@@ -75,22 +75,22 @@ public class Menu {
         System.out.print("Digite o email");
         String email = scanner.next();
         System.out.println("Digite o Trabalho");
-        if(cargo == "Mobile Members"){
+        if(cargo.equals("Mobile Members")){
             return new Mobile_Members(name,email,Trabalho.Mobile_Members);
         }
-        else if(cargo == "Heavy Lifters"){
+        else if(cargo.equals("Heavy Lifters")){
             return new Mobile_Members(name,email,Trabalho.Heavy_Lifters);
         }
-        else if(cargo == "Script Guys"){
+        else if(cargo.equals("Script Guys")){
             return new Mobile_Members(name,email,Trabalho.Script_Guys);
         }
-        else if(cargo == "Big Brothers"){
+        else if(cargo.equals("Big Brothers")){
             return new Mobile_Members(name,email,Trabalho.Big_Brothers);
         }
         else{
             System.out.println("Não Existe cargo com esse nome");
         }
-        return Menu;
+        return null;
     }
 }
 
