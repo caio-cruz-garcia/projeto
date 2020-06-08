@@ -27,8 +27,19 @@ public class Cadastrar {
     public HorariosExtras getHorarios() {
         return horarios;
     }
+    public void MostrarUsuarios(){
+        for (Usuario usuario: Listausuario) {
+            usuario.apresentacao();
+        }
+    }
+    public void ExibirMensagem(){
+        for (Usuario usuario:Listausuario) {
+            usuario.mensagem(this.horarios);
+        }
+    }
+
     public void Trocarhorario() {
-        switch (this.horarios){
+        switch (this.horarios) {
             case horarioNormal:
                 this.horarios = HorariosExtras.horarioNormal;
                 break;
@@ -39,5 +50,6 @@ public class Cadastrar {
                 break;
         }
     }
+
 
 }

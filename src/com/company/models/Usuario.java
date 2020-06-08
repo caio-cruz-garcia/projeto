@@ -5,9 +5,9 @@ import com.company.Interface.PostarMensagem;
 import com.company.Interface.Apresentacao;
 
 public abstract class Usuario implements PostarMensagem,Apresentacao {
-    public String name;
-    public String email;
-    public Trabalho cargo;
+    private String name;
+    private String email;
+    private Trabalho cargo;
 
     public Usuario(String name,String email,Trabalho cargo) {
         this.name = name;
