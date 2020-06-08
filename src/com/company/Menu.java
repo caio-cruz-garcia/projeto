@@ -1,8 +1,25 @@
 package com.company;
 
+import com.company.Enum.Trabalho;
+import com.company.Enum.HorariosExtras;
+import com.company.models.Big_Brothers;
+import com.company.models.Script_Guys;
+import com.company.models.Heavy_Lifters;
+import com.company.models.Mobile_Members;
+import com.company.models.Usuario;
+import com.company.models.Cadastrar;
+import java.util.Scanner;
+
+
 public class Menu {
-    public void run(){
+    final static Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+
+    }
         switch ();
+
+
+
      private void Menu(){
             System.out.println("1- Cadastrar Usuario:");
             System.out.println("2- Remover Usuario:");
